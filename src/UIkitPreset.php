@@ -9,6 +9,11 @@ use Illuminate\Support\Arr;
 
 class UIkitPreset extends Preset
 {
+    /**
+     * Install the preset.
+     *
+     * @return void
+     */
     public static function install()
     {
         static::updatePackages();
@@ -18,6 +23,11 @@ class UIkitPreset extends Preset
         static::removeNodeModules();
     }
 
+    /**
+     * Install the preset and auth views.
+     *
+     * @return void
+     */
     public static function installAuth()
     {
         static::install();
@@ -48,18 +58,33 @@ class UIkitPreset extends Preset
         copy(__DIR__.'/uikit-stubs/sass/app.scss', resource_path('assets/sass/app.scss'));
     }
 
+    /**
+     * Update the bootstrapping files.
+     *
+     * @return void
+     */
     protected static function updateBootstrapping()
     {
         copy(__DIR__.'/uikit-stubs/webpack.mix.js', base_path('webpack.mix.js'));
         copy(__DIR__.'/uikit-stubs/bootstrap.js', resource_path('assets/js/bootstrap.js'));
     }
 
+    /**
+     * Export the welcome view.
+     *
+     * @return void
+     */
     protected static function updateWelcomePage()
     {
         (new Filesystem())->delete(resource_path('views/welcome.blade.php'));
         copy(__DIR__.'/uikit-stubs/views/welcome.blade.php', resource_path('views/welcome.blade.php'));
     }
 
+    /**
+     * Export the authentication views.
+     *
+     * @return void
+     */
     protected static function scaffoldAuth()
     {
         file_put_contents(app_path('Http/Controllers/HomeController.php'), static::compileControllerStub());
@@ -72,6 +97,11 @@ class UIkitPreset extends Preset
         (new Filesystem())->copyDirectory(__DIR__.'/uikit-stubs/views', resource_path('views'));
     }
 
+    /**
+     * Compiles the HomeController stub.
+     *
+     * @return string
+     */
     protected static function compileControllerStub()
     {
         return str_replace(
