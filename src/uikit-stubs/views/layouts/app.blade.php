@@ -17,7 +17,7 @@
     <div id="app">
       <nav class="uk-tile-secondary uk-padding uk-padding-remove-vertical" uk-navbar>
         <div class="uk-navbar-left">
-          <a href="{{ route('welcome') }}" class="uk-navbar-item uk-logo">{{ config('app.name', 'Laravel') }}</a>
+          <a href="/" class="uk-navbar-item uk-logo">{{ config('app.name', 'Laravel') }}</a>
         </div>
         <div class="uk-navbar-right">
           @guest
