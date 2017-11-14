@@ -1,0 +1,30 @@
+{
+    "name": "tqt/laravel-uikit",
+    "description": "Laravel 5.5 frontend preset for UIkit 3",
+    "minimum-stability": "dev",
+    "license": "MIT",
+    "authors": [
+      {
+        "name": "César A. Ramírez",
+        "email": "cesar.ramirez.sv@gmail.com"
+      }
+    ],
+    "require": {
+      "laravel/framework": "^5.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "TQT\\Presets\\UIkit\\": "src/"
+        }
+    },
+    "extra": {
+       "branch-alias": {
+           "dev-master": "1.0-dev"
+       },
+       "laravel": {
+           "providers": [
+               "TQT\\Presets\\UIkit\\UIkitPresetServiceProvider"
+           ]
+       }
+   }
+}
