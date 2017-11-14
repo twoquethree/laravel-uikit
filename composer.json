@@ -2,6 +2,7 @@
     "name": "tqt/laravel-uikit",
     "description": "Laravel 5.5 frontend preset for UIkit 3",
     "minimum-stability": "dev",
+    "keywords": ["laravel", "preset", "uikit"],
     "license": "MIT",
     "authors": [
       {
