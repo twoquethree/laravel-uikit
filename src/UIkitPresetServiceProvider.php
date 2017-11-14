@@ -2,8 +2,8 @@
 
 namespace TQT\Presets\UIkit;
 
-use Illuminate\Support\ServiceProvider;
 use Illuminate\Foundation\Console\PresetCommand;
+use Illuminate\Support\ServiceProvider;
 
 class UIkitPresetServiceProvider extends ServiceProvider
 {

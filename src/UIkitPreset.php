@@ -2,10 +2,10 @@
 
 namespace TQT\Presets\UIkit;
 
-use Illuminate\Foundation\Console\Presets\Preset;
-use Illuminate\Support\Arr;
 use Illuminate\Container\Container;
 use Illuminate\Filesystem\Filesystem;
+use Illuminate\Foundation\Console\Presets\Preset;
+use Illuminate\Support\Arr;
 
 class UIkitPreset extends Preset
 {
@@ -27,7 +27,8 @@ class UIkitPreset extends Preset
     /**
      * Update the given package array.
      *
-     * @param  array  $packages
+     * @param array $packages
+     *
      * @return array
      */
     protected static function updatePackageArray(array $packages)
@@ -37,7 +38,6 @@ class UIkitPreset extends Preset
         ] + Arr::except($packages, ['bootstrap-sass', 'jquery']);
     }
 
-
     /**
      * Update the Sass files for the application.
      *
@@ -45,9 +45,8 @@ class UIkitPreset extends Preset
      */
     protected static function updateSass()
     {
-        copy(__DIR__ . '/uikit-stubs/sass/app.scss', resource_path('assets/sass/app.scss'));
+        copy(__DIR__.'/uikit-stubs/sass/app.scss', resource_path('assets/sass/app.scss'));
     }
-
 
     protected static function updateBootstrapping()
     {
@@ -57,8 +56,8 @@ class UIkitPreset extends Preset
 
     protected static function updateWelcomePage()
     {
-        (new Filesystem)->delete(resource_path('views/welcome.blade.php'));
-        copy(__DIR__ . '/uikit-stubs/views/welcome.blade.php', resource_path('views/welcome.blade.php'));
+        (new Filesystem())->delete(resource_path('views/welcome.blade.php'));
+        copy(__DIR__.'/uikit-stubs/views/welcome.blade.php', resource_path('views/welcome.blade.php'));
     }
 
     protected static function scaffoldAuth()
@@ -70,7 +69,7 @@ class UIkitPreset extends Preset
             FILE_APPEND
         );
 
-        (new Filesystem)->copyDirectory(__DIR__.'/uikit-stubs/views', resource_path('views'));
+        (new Filesystem())->copyDirectory(__DIR__.'/uikit-stubs/views', resource_path('views'));
     }
 
     protected static function compileControllerStub()
