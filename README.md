@@ -1,4 +1,4 @@
-# Laravel 5.5.x Front-end Preset For Bulma
+# Laravel 5.5.x Front-end Preset For UIkit 3
 
 [![Latest Stable Version](https://poser.pugx.org/tqt/laravel-uikit/v/stable)](https://packagist.org/packages/tqt/laravel-uikit)
 [![License](https://poser.pugx.org/tqt/laravel-uikit/license)](https://packagist.org/packages/tqt/laravel-uikit)
