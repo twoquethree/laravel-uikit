@@ -5,7 +5,7 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/ff2f3569f92047858650b41807eaa327)](https://www.codacy.com/app/cesaramirez/laravel-uikit?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=twoquethree/laravel-uikit&amp;utm_campaign=Badge_Grade)
 [![StyleCI](https://styleci.io/repos/19386515/shield?branch=master)](https://styleci.io/repos/110748648)
 
-Preset for Bulma scaffolding on new Laravel 5.5.x project.
+Preset for UIkit 3 scaffolding on new Laravel 5.5.x project.
 
 *Current version*: [**UIkit 3.0.0-Beta.35**](https://getuikit.com)
 
