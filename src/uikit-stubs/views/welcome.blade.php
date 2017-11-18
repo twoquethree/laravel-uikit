@@ -11,75 +11,35 @@
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
         <!-- Styles -->
-        <style>
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+        <style>        
             html, body {
-                background-color: #fff;
                 color: #636b6f;
                 font-family: 'Raleway', sans-serif;
                 font-weight: 100;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
             }
 
             .title {
                 font-size: 84px;
             }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
         </style>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
+        <div class="uk-flex uk-flex-center uk-flex-middle uk-position-relative uk-height-viewport uk-background-muted">
+            @if (route('login'))
+                <div class="links uk-position-top-right uk-position-small">
                     @guest
-                        <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
+                        <a href="{{ route('login') }}" class="uk-text-bold uk-text-primary uk-button uk-button-default uk-box-shadow-small">Login</a>
+                        <a href="{{ route('register') }}" class="uk-text-bold uk-text-primary uk-button uk-button-default uk-box-shadow-small">Register</a>
                     @else
-                        <a href="{{ url('/home') }}">Home</a>
+                        <a href="{{ url('/home') }}" class="uk-text-bold uk-button uk-button-default uk-box-shadow-small">Home</a>
                     @endguest
                 </div>
             @endif
 
-            <div class="content">
-                <div class="title m-b-md">
-                    {{ config('app.name', 'Laravel') }}
+            <div class="uk-align-center">
+                <div class="title uk-animation-slide-bottom uk-text-primary">
+                    {{ config('app.name', 'Laravel UIkit 3') }}
                 </div>
             </div>
         </div>
