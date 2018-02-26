@@ -45,7 +45,7 @@ class UIkitPreset extends Preset
     {
         return [
             'uikit' => '^3.0.0-beta.40',
-        ] + Arr::except($packages, ['bootstrap-sass', 'jquery']);
+        ] + Arr::except($packages, ['bootstrap-sass', 'bootstrap', 'jquery', 'popper.js']);
     }
 
     /**
