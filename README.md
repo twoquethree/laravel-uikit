@@ -1,8 +1,8 @@
-# Laravel 5.5.x Front-end Preset For UIkit 3
+# Laravel 5.5/5.6 Front-end Preset For UIkit 3
 
 [![Latest Stable Version](https://poser.pugx.org/tqt/laravel-uikit/v/stable)](https://packagist.org/packages/tqt/laravel-uikit) [![License](https://poser.pugx.org/tqt/laravel-uikit/license)](https://packagist.org/packages/tqt/laravel-uikit) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/ff2f3569f92047858650b41807eaa327)](https://www.codacy.com/app/cesaramirez/laravel-uikit?utm_source=github.com&utm_medium=referral&utm_content=twoquethree/laravel-uikit&utm_campaign=Badge_Grade) [![StyleCI](https://styleci.io/repos/19386515/shield?branch=master)](https://styleci.io/repos/110748648)
 
-Preset for UIkit 3 scaffolding on new Laravel 5.5.x project.
+Preset for UIkit 3 scaffolding on new Laravel 5.5/5.6 project.
 
 _Current version_: [**UIkit 3.0.0-Beta.40**](https://getuikit.com)
 ## Screenshots
