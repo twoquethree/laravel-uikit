@@ -3,7 +3,7 @@ window._ = require("lodash");
 window.UIkit = require("uikit");
 window.Icons = require("uikit/dist/js/uikit-icons");
 
-UIKit.use(window.Icons);
+UIkit.use(window.Icons);
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests
  * to our Laravel back-end. This library automatically handles sending the
