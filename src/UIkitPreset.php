@@ -44,7 +44,7 @@ class UIkitPreset extends Preset
     protected static function updatePackageArray(array $packages)
     {
         return [
-            'uikit' => '^3.0.0-rc.9',
+            'uikit' => '^3.0.0-rc.10',
         ] + Arr::except($packages, ['bootstrap-sass', 'bootstrap', 'jquery', 'popper.js']);
     }
 
