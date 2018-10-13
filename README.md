@@ -4,7 +4,7 @@
 
 Preset for UIkit 3 scaffolding on new Laravel 5.5+ project.
 
-_Current version_: [**UIkit 3.0.0-rc.6**](https://getuikit.com)
+_Current version_: [**UIkit 3.0.0-rc.14**](https://getuikit.com)
 
 ## Screenshots
 
