@@ -1,6 +1,6 @@
 {
   "name": "tqt/laravel-uikit",
-  "description": "Laravel 5.5/5.6 frontend preset for UIkit 3",
+  "description": "Laravel 5.5+ frontend preset for UIkit 3",
   "keywords": [
     "laravel",
     "preset",

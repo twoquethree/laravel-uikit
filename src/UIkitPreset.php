@@ -55,7 +55,7 @@ class UIkitPreset extends Preset
      */
     protected static function updateSass()
     {
-        copy(__DIR__.'/uikit-stubs/sass/app.scss', resource_path('assets/sass/app.scss'));
+        copy(__DIR__.'/uikit-stubs/sass/app.scss', static::getResourcePath('sass/app.scss'));
     }
 
     /**
@@ -66,7 +66,17 @@ class UIkitPreset extends Preset
     protected static function updateBootstrapping()
     {
         copy(__DIR__.'/uikit-stubs/webpack.mix.js', base_path('webpack.mix.js'));
-        copy(__DIR__.'/uikit-stubs/bootstrap.js', resource_path('assets/js/bootstrap.js'));
+        if (!self::expectsAssetsFolder()) {
+            file_put_contents(
+                base_path('webpack.mix.js'),
+                str_replace(
+                    'assets/',
+                    '',
+                    file_get_contents(base_path('webpack.mix.js'))
+                )
+            );
+        }
+        copy(__DIR__.'/uikit-stubs/bootstrap.js', static::getResourcePath('js/bootstrap.js'));
     }
 
     /**
@@ -109,5 +119,31 @@ class UIkitPreset extends Preset
             Container::getInstance()->getNamespace(),
             file_get_contents(__DIR__.'/uikit-stubs/controllers/HomeController.stub')
         );
+    }
+
+    /**
+     * Gets resource path depending on version of Laravel.
+     *
+     * @param string $path
+     *
+     * @return string
+     */
+    protected static function getResourcePath($path = '')
+    {
+        if (self::expectsAssetsFolder()) {
+            return resource_path('assets/'.$path);
+        }
+        return resource_path($path);
+    }
+
+    /**
+     * Should we expect to see an assets folder within this version of Laravel?
+     *
+     * @return bool
+     */
+    protected static function expectsAssetsFolder()
+    {
+        $str_version = str_replace('.', '', app()->version());
+        return (int) substr($str_version, 0, 3) < 570;
     }
 }
